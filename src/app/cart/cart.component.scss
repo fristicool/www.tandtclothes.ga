@@ -1,0 +1,64 @@
+.center-horizontal {
+    justify-content: center;
+    width: 90%;
+    padding-left: 10%;
+
+    padding-top: 5%;
+}
+
+.phone-card {
+    display: none;
+}
+
+.cart-item {
+    border: 2px;
+    border-style: solid solid none solid;
+
+    display: flex;
+    align-items: center;
+}
+
+.btn-buy {
+    background-color: #232323;
+    color: white;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    border-style: none;
+    border-radius: 35px;
+
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+}
+
+.btn-buy:hover {
+    color: #f33f3f;
+}
+
+.product-image {
+    width: 20rem;
+    padding: 1rem;
+}
+
+@media (max-width: 900px) {
+    .cart-item {
+        display: inline;
+    }
+
+    .center-horizontal {
+        display: none;
+        justify-content: start;
+        width: 30rem;
+        padding-left: 10%;
+    
+        padding-top: 5%;
+    }
+
+    .phone-card {
+        display: inline;
+    }
+}

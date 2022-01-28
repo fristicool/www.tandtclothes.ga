@@ -1,0 +1,80 @@
+.center-content-horizontal {
+    padding-top: 5rem;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.keyboard1 {
+    position: absolute;
+    width: 15%;
+    opacity: 100%;
+
+    top: 20%;
+    left: 10%;
+    transform: rotate(45deg);
+}
+
+.keyboard2 {
+    position: absolute;
+    width: 12%;
+    opacity: 100%;
+
+    top: 35%;
+    left: 80%;
+    transform: rotate(-45deg);
+}
+
+.keyboard3 {
+    z-index: -10;
+
+    position: absolute;
+    width: 10%;
+    opacity: 100%;
+
+    top: 70%;
+    left: 40%;
+    transform: rotate(-45deg);
+}
+
+.btn-info {
+    background-color: #AAEFE5;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    border-style: none;
+    border-radius: 35px;
+
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.paragraf-text {
+    font-weight: 250;
+}
+
+.text-content {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 850px) {
+    .keyboard1{display: none;}
+    .keyboard2{display: none;}
+}
+
+@media (max-height: 1125px) {
+    .keyboard3{display: none;}    
+}

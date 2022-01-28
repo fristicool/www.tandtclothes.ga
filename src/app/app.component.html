@@ -1,0 +1,33 @@
+<nav class="navbar navbar-light fixed-top"
+  style="border-style: none none solid none; background-color: #232323; text-align: center;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="padding-left: 1rem; text-transform: uppercase; font-weight: 600;"><img
+        src="http://localhost:4242/static/white-logo.svg" style="height: 3rem;" alt=""></a>
+    <div class="open-info">
+      <a href="/shop" style="padding-left: 0rem; font-weight: 600;" class="navbar-element">Our Products</a>
+      <a href="/contact" style="padding-left: 0rem; font-weight: 600;" class="navbar-element">Contact Us</a>
+
+      <a href="/cart" class="navbar-element last"><img src="http://localhost:4242/static/shopping-cart.png" alt=""
+          style="width: 1.5rem; padding-right: 2px;">{{getTotalCartItems()}}</a>
+      <div class="dropdown">
+        <button class="dropbtn"><img src="https://img.icons8.com/ios-glyphs/30/000000/menu--v1.svg"
+            class="menu-image"></button>
+        <div class="dropdown-content">
+          <a href="#"
+            style="text-decoration: none; color: white; padding-left: 1rem; font-weight: 600; text-transform: uppercase;"
+            class="navbar-element">Home</a>
+          <a href="/cart" class="navbar-element last" style="color: white;"><img
+              src="http://localhost:4242/static/shopping-cart.png" alt=""
+              style=" width: 1.5rem; padding-right: 2px;">{{getTotalCartItems()}}</a>
+        </div>
+      </div>
+    </div>
+    <!-- <a href="">Home</a> -->
+  </div>
+</nav>
+
+<!-- <img src="http://localhost:4242/static/background.svg" alt="" class="bg-image"> -->
+
+<div class="bottom"></div>
+
+<router-outlet></router-outlet>

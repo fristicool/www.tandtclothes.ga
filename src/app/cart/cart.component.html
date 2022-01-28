@@ -1,0 +1,33 @@
+<div class="center-horizontal">
+    <div style="border: 2px; border-style: none none solid none; background-color: white;">
+        <div class="cart-item" *ngFor="let item of cart; index as i">
+            <a href="/product/{{item.id}}"><img src="{{item.image}}" alt="" class="product-image"></a>
+            <div class="cart-item-info">
+                <h3>{{item.name}}</h3>
+                <br>
+                <h4>€{{item.price}}</h4>
+            </div>
+            <div style="position: relative;">
+                <input type="number" id="quantity" name="quantity" step="1" min="1" style="width: 3rem; margin-left: 5rem;" [(ngModel)]="quantitys[i]" inputmode="numeric" value="{{getQuantity(i)}}">
+            </div>
+            <div>
+                <button class="btn btn-danger" style="margin-left: 1rem;" (click)="deleteFromCart(i)" >Delete</button>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-buy" style="float: right; margin-top: 1rem;" (click)="checkout()">Buy Now</button>
+</div>
+
+<div class="phone-card">
+    <br>
+    <br>
+    <div *ngFor="let item of cart; index as i" style="text-align: center; border-style: none none solid none; background-color: white;">
+        <a href="/product/{{item.id}}"><img src="{{item.image}}" style="width: 60%; padding: 1rem;" alt=""></a>
+        <h3>{{item.name}}</h3>
+        <br>
+        <h4>€{{item.price}}</h4>
+    </div>
+    <button class="btn btn-buy" style="width: 90%;  margin-top: 1rem; margin-left: 5%;" (click)="checkout()">Buy Now</button>
+</div>
+
+<br><br><br>

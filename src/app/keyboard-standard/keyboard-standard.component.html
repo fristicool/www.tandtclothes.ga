@@ -1,0 +1,27 @@
+<div *ngIf="availableProduct">
+    <div class="container center-content" style="background: white;">
+        <img src="{{current_product.image}}" alt="product-image" class="product-img">
+        <div class="info-card-computer">
+            <h3>{{current_product.name}}</h3>
+            <p>{{current_product.description}}</p>
+            <ul>
+                <li *ngFor="item of current_product.product_details;index as i">{{current_product.product_details[i]}}</li>
+            </ul>
+            <br>
+            <p *ngIf="outOfStock" style="opacity: 70%;">Out Of Stock</p>
+            <p *ngIf="current_product.new" style="opacity: 70%; font-size: 25px;">New</p>
+            <h2>€{{current_product.price}}</h2>
+            <button [disabled]="outOfStock" class="btn btn-buy" (click)="addToCart()">Add To Cart</button>
+        </div>
+        <br class="info-card-phone">
+        <div class="info-card-phone">
+            <br>
+            <h3>{{current_product.name}}</h3>
+            <p>{{current_product.description}}</p>
+            <br>
+            <p *ngIf="outOfStock" style="opacity: 70%;">Out Of Stock</p>
+            <h2>€{{current_product.price}}</h2>
+            <button [disabled]="outOfStock" class="btn btn-buy" (click)="addToCart()">Add To Cart</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<div style="display: flex; flex-wrap: wrap;">
+    <div *ngFor="let product of products">
+        <img src="{{product.image}}" alt="" height="60px">
+        <button class="btn btn-dark" (click)="switch(product.id)">Switch Stock</button>
+    </div>
+</div>

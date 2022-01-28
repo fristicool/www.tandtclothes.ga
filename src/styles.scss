@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+.navbar {
+    border-bottom: 3px;
+    text-align: center;
+}
+
+.center-content {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error {
+    color: rgba(255, 0, 0, 0.514);
+    font-size: 5rem;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar-thumb {
+    border-style: none;
+    border-radius: 35px;
+    width: 0.5%;
+
+    background: rgba(48, 48, 48, 0.37) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(48, 48, 48, 0.603) !important;
+}
+
+::-webkit-scrollbar {
+    height: 4px;
+    width: 0.8vw;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.096) !important;
+}
+
+::selection {
+    color: white;
+    background-color: #f33f3f;
+}
+
+body {
+    background-image: url("http://localhost:4242/static/background-opacity.svg");
+    background-size: 60%;
+    background-repeat: repeat;
+}

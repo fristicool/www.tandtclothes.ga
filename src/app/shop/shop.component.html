@@ -1,0 +1,43 @@
+<div class="">
+    <div class="flexbox">
+        <!-- <div *ngFor="let item of products" style="padding: 3rem;"> -->
+        <!-- <div class="card-non-bootstrap"style="text-align: center;">
+            <div style="padding: 0.5rem;">
+                <h3>Custom Colors</h3>
+                <img src="{{currentImage}}" alt="" class="product-image">
+                <div class="dropdown-btns">
+                    <br>
+                    <div class="dropdown" style="margin-right: 40%;">
+                        <button class="btn btn-info" style="background-color: {{getColorCode(innerColor)}}">{{innerColor}}</button>
+                        <div class="dropdown-content">
+                            <a *ngFor="let color of colorOptions" (click)="setColorInner(color)" style="background-color: {{getColorCode(color)}}; color: white;">{{color}}</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-info" style="background-color: {{getColorCode(outerColor)}}">{{outerColor}}</button>
+                        <div class="dropdown-content">
+                            <a *ngFor="let color of colorOptions" (click)="setColorOuter(color)" style="background-color: {{getColorCode(color)}}; color: white;">{{color}}</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br class="dropdown-btn-br">
+                <a class="btn btn-buy" (click)="checkout()" href="/product/0">Buy - €129.99</a>
+            </div>
+        </div> -->
+        <br>
+        <div *ngFor="let product of getNonSpecialCards(0)" class="normal-card" style="justify-content: center; text-align: center; align-items: center;">
+            <div class="card-non-bootstrap">
+                <div style="padding: 0.5rem;">
+                    <h3 style="max-width: 30rem;">{{product.name}}</h3>
+                    <img src="{{product.image}}" alt="product image" class="product-image">
+                    <br><br>
+                    <a class="btn btn-buy" href="/product/{{product.id}}">Buy - €{{product.price}}</a>
+                    <!-- <a class="btn btn-buy" (click)="checkout()">Buy</a> -->
+                </div>
+            </div>
+            <br>
+        </div>
+        <!-- </div> -->
+    </div>
+</div>

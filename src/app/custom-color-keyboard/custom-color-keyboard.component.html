@@ -1,0 +1,54 @@
+<div class="container center-content">
+    <!-- <img src="{{currentProduct.shop_image}}" alt=""> -->
+    <img src="{{currentImage}}" alt="product-image" class="product-img">
+    <div class="info-card-computer">
+        <h3>{{currentProduct.name}}</h3>
+        <p>{{currentProduct.description}}</p>
+        <div class="dropdown-btns">
+            <br>
+            <div class="dropdown">
+                <button class="btn btn-info" style="background-color: {{getColorCode(innerColor)}}">{{innerColor}}</button>
+                <div class="dropdown-content">
+                    <a *ngFor="let color of colorOptions" (click)="setColorInner(color)" style="background-color: {{getColorCode(color)}}; color: white;">{{color}}</a>
+                </div>
+            </div>
+            <br>
+            <div class="dropdown">
+                <button class="btn btn-info" style="background-color: {{getColorCode(outerColor)}}">{{outerColor}}</button>
+                <div class="dropdown-content">
+                    <a *ngFor="let color of colorOptions" (click)="setColorOuter(color)" style="background-color: {{getColorCode(color)}}; color: white;">{{color}}</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <p *ngIf="outOfStock" style="opacity: 70%;">Out Of Stock</p>
+        <h2>€{{currentProduct.price}}</h2>
+        <button [disabled]="outOfStock" class="btn btn-buy" (click)="addToCart()">Add To Cart</button>
+    </div>
+    <br class="info-card-phone">
+    <div class="info-card-phone">
+        <br>
+        <h3>{{currentProduct.name}}</h3>
+        <p>{{currentProduct.description}}</p>
+        <div class="dropdown-btns">
+            <br>
+            <div class="dropdown">
+                <button class="btn btn-info" style="background-color: {{getColorCode(innerColor)}}">{{innerColor}}</button>
+                <div class="dropdown-content">
+                    <a *ngFor="let color of colorOptions" (click)="setColorInner(color)" style="background-color: {{getColorCode(color)}}; color: white;">{{color}}</a>
+                </div>
+            </div>
+            <br>
+            <div class="dropdown">
+                <button class="btn btn-info" style="background-color: {{getColorCode(outerColor)}}">{{outerColor}}</button>
+                <div class="dropdown-content">
+                    <a *ngFor="let color of colorOptions" (click)="setColorOuter(color)" style="background-color: {{getColorCode(color)}}; color: white;">{{color}}</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <p *ngIf="outOfStock" style="opacity: 70%;">Out Of Stock</p>
+        <h2>€{{currentProduct.price}}</h2>
+        <button [disabled]="outOfStock" class="btn btn-buy" (click)="addToCart()">Add To Cart</button>
+    </div>
+</div>

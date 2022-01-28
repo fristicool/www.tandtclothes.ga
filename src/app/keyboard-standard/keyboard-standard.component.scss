@@ -1,0 +1,93 @@
+.product-img {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+}
+
+.center-content {
+    display: flex;
+
+    padding-top: 2rem;
+    position: relative;
+    margin: 0;
+    top: 0;
+    left: 0;
+    transform: none;
+    justify-content: center;
+}
+
+.info-card-computer{
+    display: none;
+}
+
+.info-card-phone{
+    display: inline;
+
+    border-width: 2px;
+    border-style: solid none none none;
+}
+
+.btn-buy {
+    width: 100%;
+
+    background-color: #232323;
+    color: white;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    border-style: none;
+    border-radius: 35px;
+
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+}
+
+.btn-buy:hover {
+    color: #f33f3f;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 580px) {
+    .product-img {
+        width: 50%;
+    }
+
+    .center-content {
+        margin: auto;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        padding-top: 0;
+        justify-content: center;
+    }
+
+    .info-card-computer{
+        display: inline;
+
+        padding-left: 2rem;
+        margin: 2rem;
+        border-left: black;
+        border-style: none none none solid;
+        border-width: 2px;
+    }
+
+    .info-card-phone{
+        display: none;
+    }
+
+    .container {
+        flex-wrap: nowrap;
+    }   
+}
